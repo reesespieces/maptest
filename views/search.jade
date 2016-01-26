@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='initial-scale=1.0, user-scalable=no')
+    meta(charset='utf-8')
+    link(rel='shortcut icon', href='http://convertico.com/images/55d379bacba01/icon2.png')
+    
+    title Search
+    // Google Maps
+    script(src='https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places')
+    // Local CSS and JS
+    script(src='/javascripts/search.js')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/search.css')
+    // JQuery
+    link(rel='stylesheet', href='//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css')
+    script(src='//code.jquery.com/jquery-1.10.2.js')
+    script(src='//code.jquery.com/ui/1.11.4/jquery-ui.js')
+    // Materialize: Compiled and minified CSS
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css')
+    // Materialize: Compiled and minified JavaScript
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js')
+  body
+    include navBar.jade
+    
+    input#pac-input.controls(type='text', placeholder='Search Box')
+    #map-canvas(style='width:65%; float:left')
+    div(style='width:34%;float:left;')
+      #bookVisit.center
+        h4 Welcome.
+        p.flow-text
+          | MapOurTours allows you to book all your college tours in one place.
+          | To get started, search by either location or by college name. Then schedule
+          | your desired date and time. Voilà!
+        a(href='/search')
+          img(src='images/search.png', alt='MapOurTours', style='height:60px; width:60px;')
+      #bookTime
+      #booked
+    //
+      A DB OF  COLLEGE AVAILABILITIES (TOUR TIMES) SET UP LIKE:
+      COLLEGES = [{'NAME':'HARVARD',...,'DATES':[{DATE: '8/15/15', TIMES:[10, 11, 1]}, {'DATE':...}]}]
+      <input type="text" id="datetimepicker"/><br><br>

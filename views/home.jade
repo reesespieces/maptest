@@ -1,0 +1,105 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='initial-scale=1.0, user-scalable=no')
+    meta(charset='utf-8')
+    link(rel='shortcut icon', href='http://convertico.com/images/55d379bacba01/icon2.png')
+    title MapOurTours
+    // Our created js and css files
+    script(src='//code.jquery.com/jquery-1.10.2.js')
+    script(src='/javascripts/home.js')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/search.css')
+    // Compiled and minified CSS
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css')
+    // Compiled and minified JavaScript
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js')
+    style.
+      .parallax-container {
+      height: "90px";
+      }
+    script.
+      $(document).ready(function(){
+      $('.parallax').parallax();
+      });
+  body
+    include navBar.jade
+    
+    .parallax-container
+      .parallax
+        img(src='images/campus2.jpg')
+      // MISSION STATEMENT
+      p.center.flow-text.white-text(style='text-shadow: 2px 2px 8px #000; font-size:27px;')
+        b Simplifying the process of planning a college visit
+    // SIGN UP
+    if !user
+      br
+      .center
+        a.waves-effect.waves-light.btn(href='/register') Sign Up
+    .container
+      .section
+        // Icon Section
+        .row
+          .col.s12.m4
+            .icon-block
+              // FIRST THIRD OF THE PAGE, THE PROBLEM
+              h5.center Find Your College
+              p.light
+                | MapOurTours provides an easy, accessible way to search for the
+                | colleges you want to visit.  Simply search our map by location or college name
+                | to find the college that is the perfect match for you.  From there it is easy
+                | to book available campus tours.  Book more than one tour and add them to your
+                | schedule to keep track of all of your college visits.
+          // SECOND THIRD, THE SOLUTION
+          .col.s12.m4
+            .icon-block
+              h5.center Why MapOurTours?
+              p.light
+                | MapOurTours is designed to improve the process of scheduling and
+                | booking college tours by putting all of your information in one
+                | place.  After signing up, a user has the ability to book any college
+                | tour. 
+                br
+                br
+                | MapOurTours saves users' information for booking a campus tour; this
+                |                 way the user does not have to re-enter their information every time they want to book
+                |                 a tour.
+                |                 The search map makes it easy to see what colleges are near you or near the area you are
+                |                 visiting.  This
+                |                 feature gives users the ability to schedule tours with
+                |                 colleges that they hadn’t planned on visiting prior to using our
+                |                 website.  MapOurTours makes the booking process a simple, accessible, and
+                |                 enjoyable experience so students can get the most out of their visits.
+          // ABOUT US
+          .col.s12.m4
+            .icon-block
+              h5.center About Us
+              p.light
+                b Hannah Lerner, MASSACHUSETTS
+              p.light
+                | Hannah is a rising junior at Boston University Academy. Besides coding, she likes
+                | to fence and compete in CyberPatriot competitions.
+              p
+              p.light
+                b Maddie Comtois, TEXAS
+              p.light
+                | Maddie is a rising junior at All Saints' Episcopal School. Besides programming,
+                | she likes to study foreign languages and make movies.
+              p
+              p.light
+                b Maddie Dick, CONNECTICUT
+              p.light
+                | Maddie is a rising senior at Staples High School. Besides programming, she
+                | enjoys creative activites, like photography and making movies.
+              p
+              p.light
+                b Nora Mitchell, NEW YORK
+              p.light
+                | Nora is a rising senior at Clarkstown North High School. Besides coding,
+                | she likes drawing and writing.
+              p
+    center
+      img(src='/images/icon3.png')
+    br
+    br
+  // FOOTER
+  include footer.jade

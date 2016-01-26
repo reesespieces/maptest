@@ -1,0 +1,69 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='initial-scale=1.0, user-scalable=no')
+    meta(charset='utf-8')
+    link(rel='shortcut icon', href='http://convertico.com/images/55d379bacba01/icon2.png')
+    
+    title Profile
+    // Our created js and css files
+    script(src='//code.jquery.com/jquery-1.10.2.js')
+    script(src='/javascripts/profile.js')
+    link(rel='stylesheet', href='/stylesheets/profile.css')
+    // Compiled and minified CSS
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css')
+    // Compiled and minified JavaScript
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js')
+    style.
+      .parallax-container {
+      height: "90px";
+      }
+    script.
+      $(document).ready(function(){
+      $('.parallax').parallax();
+      });
+  body
+    include navBar.jade
+    //
+      USER FIELD
+      <div style="float:left; width:33%;">
+      <p> Hello World </p>
+      </div>
+    .center(style='width:25%; float:left;')
+      br
+      br
+      img(src='/images/user.png', style='width:96px; height:96px;')
+      h5= user.fullName
+      p#emailText.flow-text= user.email
+      p
+    div(style='width:65%;float:left;padding-left:5%;')
+      br
+      div
+        h3 My Colleges
+      hr
+      #collegeList
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    include footer.jade
