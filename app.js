@@ -11,7 +11,8 @@ var mongo = require('mongodb');
 var monk = require('monk');
 
 //TWO DB: MARKERS AND USERS
-var db = monk('localhost:27017/maptest');
+//var db = monk('localhost:27017/maptest');
+var db = monk('mongodb://heroku_b8m0sncz:2cak1epems3bg1npit6t76oii8@ds051595.mongolab.com:51595/heroku_b8m0sncz');
 var dbgwc = monk('localhost:27017/gwcfinal');
 
 var routes = require('./routes/index');
